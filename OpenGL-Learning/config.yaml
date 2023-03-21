@@ -1,0 +1,4 @@
+config:
+  window:
+    Height: 1080
+    Width: 1920
