@@ -25,7 +25,7 @@ private:
 	std::unique_ptr<VertexBufferLayout> m_VBLayout;
 	std::unique_ptr<IndexBuffer> m_IB;
 
-	Renderer m_Renderer;
+	BatchRenderer m_Renderer;
 
 	void LoadTextures(Shader& shader);
 

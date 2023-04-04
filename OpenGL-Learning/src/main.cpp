@@ -15,6 +15,7 @@
 #include "glm/gtc/matrix_transform.hpp"
 
 #include "config.h"
+#include "raymarcher/core/MarchRenderer.h"
 
 #include "imgui_helper/imgui.h"
 
@@ -34,7 +35,7 @@ int main(void)
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(conf.WIN_WIDTH, conf.WIN_HEIGHT, "Mineclone", NULL, NULL);
+    window = glfwCreateWindow(conf.WIN_WIDTH, conf.WIN_HEIGHT, "Raymarcher", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -59,7 +60,9 @@ int main(void)
     GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
     GLCall(glEnable(GL_BLEND));
 
-    Renderer renderer;
+    BatchRenderer renderer;
+    Raymarching::MarchRenderer Raymarcher = Raymarching::MarchRenderer();
+
 
     ImGuiIO& io = ImGuiInit();
 
@@ -67,7 +70,6 @@ int main(void)
     ImGui_ImplOpenGL3_Init();
 
     // Game
-    // Handler GameHandler = Handler(window);
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
@@ -78,15 +80,12 @@ int main(void)
 
         ImGuiNewFrame();
 
-        ImGui::Begin("Test Window");
-        ImGui::Text("Press this Button :)");
-        if (ImGui::Button("Button")) LOGC("Button Press!", LOG_COLOR::SPECIAL_A);
-        ImGui::End();
-
         //Game
-        /*GameHandler.OnInput(window);
-        GameHandler.OnUpdate();
-        GameHandler.OnRender();*/
+        Raymarcher.OnInput(window);
+        Raymarcher.OnUpdate();
+        Raymarcher.OnRender();
+
+        Raymarcher.OnImGuiRender(window);
 
         ImGuiRender(io);
 

@@ -24,7 +24,7 @@
     <ProjectGuid>{3c341fd2-b706-4ea7-ab9f-ea47a963b1e6}</ProjectGuid>
     <RootNamespace>OpenGLLearning</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Template</ProjectName>
+    <ProjectName>Raymarcher</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -144,6 +144,7 @@
     <ClCompile Include="src\OpenGL_util\model\Model3D.cpp" />
     <ClCompile Include="src\OpenGL_util\model\Mesh.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\raymarcher\core\MarchRenderer.cpp" />
     <ClCompile Include="src\vendor\imgui\imgui_impl_glfw.cpp" />
     <ClCompile Include="src\vendor\imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\OpenGL_util\core\Renderer.cpp" />
@@ -306,6 +307,9 @@
     <ClInclude Include="src\OpenGL_util\misc\Vertex.hpp" />
     <ClInclude Include="src\OpenGL_util\model\Model3D.h" />
     <ClInclude Include="src\OpenGL_util\model\Mesh.h" />
+    <ClInclude Include="src\raymarcher\core\Camera.h" />
+    <ClInclude Include="src\raymarcher\core\MarchRenderer.h" />
+    <ClInclude Include="src\raymarcher\Primitive.h" />
     <ClInclude Include="src\vendor\imgui\imgui_impl_glfw.h" />
     <ClInclude Include="src\vendor\imgui\imgui_impl_opengl3.h" />
     <ClInclude Include="src\OpenGL_util\core\Renderer.h" />

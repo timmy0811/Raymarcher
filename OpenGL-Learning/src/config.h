@@ -23,7 +23,6 @@ inline void LOGC(const std::string& msg, LOG_COLOR color = LOG_COLOR::LOG) {
 	SetConsoleTextAttribute(hConsole, 15);
 }
 
-
 class Config {
 private:
 	const std::string m_Path;

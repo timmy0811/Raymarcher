@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Git\OpenGL-BatchTemplate\x64\Debug\Template.exe</FullPath>
+      <FullPath>C:\Git\Raymarcher\x64\Debug\Template.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
