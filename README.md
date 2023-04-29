@@ -13,4 +13,4 @@ Rendering complex fractals with infinite Precision (More cooming in the future!)
 Roughness affecting reflections (adjustable):
 ![](https://github.com/timmy0811/Raymarcher/blob/main/img/img1.png?raw=true)
 Multi-Body-Interpolation:
-![](https://github.com/timmy0811/Raymarcher/blob/main/img/img1.png?raw=true)
+![](https://github.com/timmy0811/Raymarcher/blob/main/img/img3.png?raw=true)
